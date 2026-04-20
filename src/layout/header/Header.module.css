@@ -1,47 +1,106 @@
+:root {
+    --primary-color: #2563eb; /* Акцентный синий */
+    --text-color: #2d3436;
+    --transition: all 0.3s ease;
+}
+
 .header__top {
     display: flex;
     align-items: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    /* Тонкая тень снизу для эффекта отделения от контента */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .header__logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-right: 75px;
+    gap: 12px;
+    margin-right: auto; /* Автоматический отступ прижмет навигацию к центру или правому краю */
+    transition: var(--transition);
+}
+
+.header__logo:hover {
+    transform: scale(1.02); /* Легкое увеличение при наведении */
 }
 
 .header__logo img {
-    width: 80px;
+    width: 60px; /* Немного компактнее */
+    height: auto;
 }
 
 .header__nav {
     display: flex;
-    gap: 36px;
-    margin-right: 162px;
+    gap: 30px;
+    margin-right: 40px;
 }
 
 .header__nav a {
-    color: #333;
+    color: var(--text-color);
     text-transform: uppercase;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 15px; /* Чуть меньше для аккуратности */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    position: relative;
+    transition: var(--transition);
+}
+
+/* Эффект подчеркивания при наведении */
+.header__nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.header__nav a:hover {
+    color: var(--primary-color);
+}
+
+.header__nav a:hover::after {
+    width: 100%;
 }
 
 .header__search {
     position: relative;
-    border-radius: 40px;
-    padding-right: 10px;
+    border-radius: 50px; /* Полностью скругленные края */
+    padding: 4px 15px;
     display: flex;
     align-items: center;
-    border: 1px solid #e0e0e0;
-    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.25)inset;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+/* Фокус на поиске */
+.header__search:focus-within {
+    background: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
 .header__search input {
-    background-color: transparent;
-    padding: 15px 7px 15px 22px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 10px 10px 5px;
+    font-size: 14px;
+    width: 180px; /* Фиксированная ширина, чтобы не прыгало */
 }
 
 .header__search span {
     cursor: pointer;
+    color: #636e72;
+    transition: var(--transition);
+}
+
+.header__search span:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
 }

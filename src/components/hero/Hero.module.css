@@ -1,0 +1,135 @@
+.hero {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: 600px; /* Фиксированная высота как на скрине */
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.slider {
+    flex: 2.5; /* Слайдер значительно шире новостей */
+    min-width: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.slider :global(.swiper) {
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Текст по центру вертикально */
+    padding-left: 60px; /* Отступ текста от левого края */
+    position: relative;
+}
+
+/* Мягкое затемнение слева для текста */
+.slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, transparent 100%);
+    z-index: 1;
+}
+
+.slideContent {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 450px;
+}
+
+.slideContent h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.slideContent p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Синяя кнопка как на примере */
+.moreBtn {
+    padding: 12px 35px;
+    background: #3498db; /* Небесно-голубой */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.moreBtn:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.news {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.newsCard {
+    flex: 1;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* Легкая вуаль на всю картинку */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    color: white;
+    transition: 0.3s;
+}
+
+.newsCard:hover .newsOverlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.newsOverlay h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.newsOverlay p {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.3;
+}
+
+/* Стилизация пагинации (белые точки внизу) */
+:global(.swiper-pagination) {
+    bottom: 30px !important;
+}
+
+:global(.swiper-pagination-bullet) {
+    background: white !important;
+    opacity: 0.5 !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+    opacity: 1 !important;
+}

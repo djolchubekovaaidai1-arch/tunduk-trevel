@@ -34,7 +34,7 @@ const Header = () => {
                 <div className={styles.header__logo}>
                     <img src="/logo.png" alt="" />
                     <div>
-                        <h2>TYNDYK TREVEL</h2>
+                        <h2>TUNDUK TREVEL</h2>
                         <p>Кыялыныздагы эс алуу</p>
                     </div>
                 </div>

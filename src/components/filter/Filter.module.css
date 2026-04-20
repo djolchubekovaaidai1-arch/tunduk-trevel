@@ -1,0 +1,63 @@
+.filterContainer {
+ background: #F2F2F2;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0; /* Убрал auto, добавил отступ только сверху/снизу */
+  width: 100%;    /* Занимает всё пространство контейнера-апп */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.inputsGroup {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin-top: 15px;
+  flex-wrap: wrap; /* Чтобы на мобилках кнопки не вылезали */
+}
+
+.inputWrapper { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  flex: 1; 
+  min-width: 200px; /* Чтобы поля не сжимались слишком сильно */
+}
+
+.inputWrapper label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.inputWrapper select, 
+.inputWrapper input { 
+  padding: 12px 15px; 
+  border-radius: 20px; 
+  border: 1px solid #ddd; 
+  outline: none; 
+  background-color: #f9f9f9;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  width: 100%; /* Теперь инпуты внутри ряда делят место поровну */
+}
+
+.searchBtn { 
+  background: #3498db; 
+  color: white; 
+  border: none; 
+  padding: 12px 40px; 
+  border-radius: 25px; 
+  cursor: pointer; 
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.searchBtn:hover {
+  background: #2980b9;
+}
