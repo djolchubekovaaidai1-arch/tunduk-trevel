@@ -1,6 +1,7 @@
 import styles from './Header.module.css'
 import { RiSearchLine } from "react-icons/ri";
 import {Button} from "@mui/material"
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,7 +15,7 @@ const menu = [
         link: "/contacts"
     },
     {
-        name: "О компании",
+        name: "Kомпании",
         link: "/about-company"
     },
     {
@@ -39,7 +40,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles.header__nav}>
-                    {menu.map(item => <a key={item.name} href={item.link}>{item.name}</a>)}
+                    {menu.map(item => <Link key={item.name} to={item.link}>{item.name}</Link>)}
                 </div>
                 <div className={styles.header__search}>
                     <input type="text" placeholder='Поиск' />
