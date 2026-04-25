@@ -12,7 +12,8 @@ const mockApi = [
         description: "Таш-Рабат (также Ташрабат) — это древний караван-сарай, располагающийся на территории Нарынской области, находящийся недалеко от границы с Китаем, одна из ключевых частей древнего Великого Шелкового Пути."
     },
     {
-        image: "https://central-asia.live/_next/image?url=https%3A%2F%2Fcentral-asia.live%2Fuploads%2Fburana-tower.jpg&w=3840&q=75",
+      image: "https://too.kg/en/wp-content/uploads/Burana-Tower-2-1024x585.jpg",
+        // image: "",
         title: "Бурана: Минарет, хранящий тайны прошлого Кыргызстана",
         description: "Минарет Бурана, расположенный в Чуйской долине в Кыргызстане, - это древний минарет высотой 25 метров, который сохранился с 11-го века. Считается, что его построили в рамках древнего города Баласагун, который служил столицей Караканидской империи."
     }
@@ -37,8 +38,8 @@ const Hero = () => {
                 >
                     {mockApi.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <div 
-                                className={styles.slide} 
+                            <div
+                                className={styles.slide}
                                 style={{ backgroundImage: `url(${item.image})` }}
                             >
                                 <div className={styles.slideContent}>
@@ -54,9 +55,9 @@ const Hero = () => {
 
             <div className={styles.news}>
                 {mockApi.slice(0, 2).map((item, index) => (
-                    <div 
-                        key={index} 
-                        className={styles.newsCard} 
+                    <div
+                        key={index}
+                        className={styles.newsCard}
                         style={{ backgroundImage: `url(${item.image})` }}
                     >
                         <div className={styles.newsOverlay}>

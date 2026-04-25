@@ -9,6 +9,10 @@
   outline: none;
 }
 
+a {
+  color: black;
+}
+
 .container-app{
   width: 1800px;
   margin: 0 auto;
