@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Hero from '../../components/hero/Hero';
 import Filter from '../../components/filter/Filter';
 import Tours from '../../components/Tours/Tours';
+import "../../service/tourService";
+import "../../service/companyService"
 
 
 const ALL_TOURS = [
