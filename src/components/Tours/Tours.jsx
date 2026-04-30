@@ -27,7 +27,7 @@ const Tours = ({ items = [] }) => {
         {items.map((tour) => (
           <div key={tour.id} className={style.card}>
             <div className={style.imageBlock} style={{
-              backgroundImage: `url("${encodeURI(tour.img)}")`,
+              backgroundImage: `url("${encodeURI(tour.images !== null ? tour.images[0]:"")}")`,
             }}>
               {tour.badge && (
                 <span className={`${style.badge} ${getBadgeClass(tour.badge)}`}>

@@ -10,6 +10,7 @@ import BlogPage from './pages/blog/BlogPage.jsx'
 import NewsPage from './pages/news/NewsPage.jsx'
 import HomePage from './pages/home/HomePage.jsx'
 import Header from './layout/header/Header.jsx'
+import AdminPage from './pages/admin/AdminPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/about-company" element={<AboutCompanyPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/news" element={<NewsPage />} />
+      <Route path="/admin" element={<AdminPage/>} />
     </Routes>
   </BrowserRouter>,
 )
